@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Mode Contact Section</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact2.css') }}">
+</head>
+
+
+<body>
+  <main class="page">
+
+    <header class="mode-header">
+      <div class="sun-icon" aria-hidden="true">
+        <span class="sun"></span>
+      </div>
+      <h1>Hi, again. You know you loved it here! :)</h1>
+    </header>
+
+    <section class="contact-card">
+      <div class="contact-copy">
+        <div class="project-badge">
+          <span class="badge-icon">🚀</span>
+          <span>Start A Project</span>
+        </div>
+
+        <h2>Let's Build Your<br>Digital Product!</h2>
+
+        <p class="intro">
+          Ready to launch your next project? Fill out the form<br class="desktop-break">
+          or reach out directly to start a conversation about your<br class="desktop-break">
+          business needs and how i can be your lucky charm.
+        </p>
+
+        <div class="contact-details">
+          <div class="detail">
+            <span class="detail-icon">📞</span>
+            <span>+234(0)8022299407</span>
+          </div>
+
+          <div class="detail">
+            <span class="detail-icon pin">🏫</span>
+            <span>Nigeria</span>
+          </div>
+
+          <div class="detail email">
+            <span class="detail-icon">📧</span>
+            <span>ataayobami@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+          <form class="contact-form" method="POST">
+
+            {{ form.hidden_tag() }}
+
+            <label>Your name</label>
+            {{ form.Name(placeholder="Name") }}
+
+            <label>Your Email Address</label>
+            {{ form.Email(placeholder="Email") }}
+
+            <label>Your Message</label>
+            {{ form.Message(placeholder="Enter your message") }}
+
+
+            <button type="submit">
+              <span class="send-icon">➤</span>
+              <span>Submit</span>
+            </button>
+
+          </form>
+
+
+
+
+
+    </section>
+  </main>
+</body>
+</html>
