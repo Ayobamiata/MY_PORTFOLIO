@@ -19,7 +19,7 @@ body {
   background-image:url("contact.png");
   object-fit:contain;
   text-align:center;
-  overflow:hidden;
+  overflow-x:hidden;
   color: var(--text);
 }
 
