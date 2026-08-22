@@ -5,7 +5,7 @@ from werkzeug.utils import redirect
 from datetime import datetime             # <-- timestamp each message
 from portfolio.database import messages_collection
 
-from forms import Contact_form
+from portfolio.forms import Contact_form
 
 app=Flask(__name__)
 app.config['SECRET_KEY']='great'
