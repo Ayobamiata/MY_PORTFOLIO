@@ -3,7 +3,7 @@ from flask import Flask, render_template, flash, url_for
 from flask_mail import Mail,Message
 from werkzeug.utils import redirect
 from datetime import datetime             # <-- timestamp each message
-from database import messages_collection
+from portfolio.database import messages_collection
 
 from forms import Contact_form
 
