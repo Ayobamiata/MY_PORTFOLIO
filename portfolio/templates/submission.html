@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response-submitted</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='submission.css') }}">
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <a href="{{ url_for('home') }}">HOME</a>
+        <a href="{{ url_for('about') }}">ABOUT</a>
+        <a href="{{ url_for('cv') }}">CAREER CV</a>
+        <a href="{{ url_for('contact') }}">CONTACT</a>
+        <a href="{{ url_for('project') }}">PROJECTS</a>
+    </nav>
+
+    <main class="page">
+
+
+            <div class="contact-form">
+            <h2>{{name}}!
+
+                <br><br>It is great to have you connect.
+                <br><br>Your message has been received and I will reply to you very soon via email.
+            </h2>
+
+            </div>
+
+
+
+    </main>
+
+</body>
+</html>
