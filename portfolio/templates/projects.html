@@ -13,7 +13,7 @@
     <nav class="top-nav">
         <a href="{{ url_for('home') }}">HOME</a>
         <a href="{{ url_for('about') }}">ABOUT</a>
-        <a href="#">CAREER CV</a>
+        <a href="{{ url_for('cv') }}">CAREER CV</a>
         <a href="{{ url_for('contact') }}">CONTACT</a>
     </nav>
 
@@ -21,6 +21,7 @@
 
     <section class="blog-section">
     <h2>HERE ARE SOME OF WHAT I HAVE BEEN UP TO...</h2>
+    <h4>Kindly click on the titles/images to access the projects</h4>
 
     <div class="blog-container">
 
@@ -37,7 +38,9 @@
                 INVENTORY MANAGEMENT SYSTEM
             </a>
 
-            <p class="blog-meta">Details</p>
+            <p class="blog-meta">This is an e-commerce role based project executed with Node.js and Javascript as the primary tech stack.<br><br>
+                Both "Admin" and "sales" require authentication to access the inventory's backend but only
+                "Admin"s are authorized to add, sell and edit the products they have in their inventory while "sales" can only sell products.</p>
         </article>
 
 
@@ -60,21 +63,25 @@
 
         <!-- Hello World -->
         <article class="blog-card">
-            <a href="YOUR-HELLO-WORLD-LINK">
+            <a href="https://drivecore-hjkf.onrender.com/api-docs">
                 <img
                     src="{{ url_for('static', filename='car-reg2.JPG') }}"
                     alt="Car-reg img"
                 >
             </a>
 
-            <a href="YOUR-HELLO-WORLD-LINK" class="blog-title">
+            <a href="https://drivecore-hjkf.onrender.com/api-docs" class="blog-title">
                 CAR REGISTRATION SYSTEM
             </a>
 
             <p class="blog-meta">My team-mates and I built a role based access Car Registration system where vehicles owners can register their vehicles by
                 submitting the required documents and get approved by an Admin or a staff. <br><br>
 
-                When a vehicle owner registers and get approved, they get a unique registration ID with their registration certificate, and a plate number.</p>
+                When a vehicle owner registers and get approved, they get a unique registration ID with their registration certificate, and a plate number.
+
+                <br><br>
+                I was in charge of building the Admin Dashboard; so the Admin gets to see the big picture at a glance.
+            </p>
         </article>
 
     </div>

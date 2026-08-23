@@ -1,13 +1,4 @@
 
-# from pymongo import MongoClient
-#
-# client = MongoClient("mongodb://localhost:27017/")
-#
-# db = client["contact_database"]
-#
-# messages_collection = db["messages"]
-#
-# print(db.list_collection_names())
 
 
 import os

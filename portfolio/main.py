@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, flash, url_for
+from flask import Flask, render_template, flash, url_for,request
 from flask_mail import Mail,Message
 from werkzeug.utils import redirect
 from datetime import datetime             # <-- timestamp each message
@@ -34,11 +34,19 @@ def contact():
         })
 
         flash("Message sent successfully!","success")
-        return redirect(url_for("contact"))
+        return redirect(url_for("submission", name=name))
 
     return render_template("contact2.html",form=form)
 
 
+
+# -----------------successful submission--------------
+@app.route('/submission')
+def submission():
+    name = request.args.get("name", "")
+    name = name.strip().title()
+
+    return render_template("submission.html",name=name)
 
 
 @app.route('/about')
@@ -49,6 +57,12 @@ def about():
 @app.route('/projects')
 def project():
     return render_template("projects.html")
+
+
+@app.route('/cv')
+def cv():
+    return render_template("cv.html")
+
 
 
 if __name__ == "__main__":

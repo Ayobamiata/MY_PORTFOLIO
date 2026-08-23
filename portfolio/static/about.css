@@ -1,4 +1,28 @@
 
+
+.top-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 20px 0;
+  background-color:#622B14;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top-nav a:hover {
+  color: #f9c900;
+}
+
+
+
 body{
     background-image:url('about.png');
     text-align:left; /* Align text to the right */

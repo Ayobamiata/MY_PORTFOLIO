@@ -7,12 +7,13 @@
   align-items: center;
   gap: 35px;
   padding: 20px 0;
+  background-color:#622B14;
 }
 
 .top-nav a {
-  color: black;
+  color: white;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -27,7 +28,7 @@
 
 .blog-section {
     width: 100%;
-    padding: 70px;
+    padding-top:55px;
     text-align: center;
     background: white;
 
@@ -35,12 +36,21 @@
 }
 
 .blog-section h2 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 28px;
     font-weight: 600;
     color: #622B14;
 }
+
+.blog-section h4 {
+    margin-bottom: 50px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #622B14;
+}
+
 
 
 /* =========================
@@ -81,7 +91,8 @@
     font-family: Georgia, "Times New Roman", serif;
     font-size: 19px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 17px;
+    margin-top: 17px;
 }
 
 .blog-title:hover {
