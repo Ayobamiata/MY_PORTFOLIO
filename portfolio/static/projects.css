@@ -1,0 +1,165 @@
+
+
+.top-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 20px 0;
+}
+
+.top-nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.top-nav a:hover {
+  color: #f9c900;
+}
+
+
+/* =========================
+   BLOG SECTION
+========================= */
+
+.blog-section {
+    width: 100%;
+    padding: 70px;
+    text-align: center;
+    background: white;
+
+
+}
+
+.blog-section h2 {
+    margin-bottom: 50px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #622B14;
+}
+
+
+/* =========================
+   BLOG CARDS
+========================= */
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    width: 60%;
+    text-align: center;
+}
+
+
+/* IMAGE */
+
+.blog-card img {
+    display: block;
+    width: 100%;
+    height: 345px;
+    object-fit: cover;
+    margin-bottom: 18px;
+}
+
+
+/* ARTICLE TITLE */
+
+.blog-title {
+    display: inline-block;
+    color: #622B14;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.blog-title:hover {
+    text-decoration: underline;
+}
+
+
+/* DATE / CATEGORY */
+
+.blog-meta {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    color: black;
+    text-align: justify;
+}
+
+
+/* =========================
+   GO TO BLOG BUTTON
+========================= */
+
+.blog-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px 22px;
+    background: #622B14;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.blog-button:hover {
+    background: #b56f6f;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .blog-section {
+        padding: 60px 6%;
+    }
+
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .blog-card {
+        width: 80%;
+    }
+
+    .blog-card img {
+        height: 180px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .blog-section h2 {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+
+    .blog-card {
+        width: 100%;
+    }
+
+    .blog-card img {
+        height: 190px;
+    }
+}

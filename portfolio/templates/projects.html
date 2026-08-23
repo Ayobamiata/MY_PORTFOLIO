@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='projects.css') }}">
+
+    <title>AYOBAMI-Projects</title>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="{{ url_for('home') }}">HOME</a>
+        <a href="{{ url_for('about') }}">ABOUT</a>
+        <a href="#">CAREER CV</a>
+        <a href="{{ url_for('contact') }}">CONTACT</a>
+    </nav>
+
+
+
+    <section class="blog-section">
+    <h2>HERE ARE SOME OF WHAT I HAVE BEEN UP TO...</h2>
+
+    <div class="blog-container">
+
+        <!-- Project 1 -->
+        <article class="blog-card">
+            <a href="https://inventory-goiq.onrender.com/">
+                <img
+                    src="{{ url_for('static', filename='inventory-image2.JPG') }}"
+                    alt="Inventory Management System image"
+                >
+            </a>
+
+            <a href="https://inventory-goiq.onrender.com/" class="blog-title">
+                INVENTORY MANAGEMENT SYSTEM
+            </a>
+
+            <p class="blog-meta">Details</p>
+        </article>
+
+
+        <!-- Article 2 -->
+        <article class="blog-card">
+            <a href="YOUR-ARTICLE-2-LINK">
+                <img
+                    src="{{ url_for('static', filename='fintech-img1.JPG') }}"
+                    alt="fintech img"
+                >
+            </a>
+
+            <a href="YOUR-ARTICLE-2-LINK" class="blog-title">
+                START-UP BANK
+            </a>
+
+            <p class="blog-meta">Details</p>
+        </article>
+
+
+        <!-- Hello World -->
+        <article class="blog-card">
+            <a href="YOUR-HELLO-WORLD-LINK">
+                <img
+                    src="{{ url_for('static', filename='car-reg2.JPG') }}"
+                    alt="Car-reg img"
+                >
+            </a>
+
+            <a href="YOUR-HELLO-WORLD-LINK" class="blog-title">
+                CAR REGISTRATION SYSTEM
+            </a>
+
+            <p class="blog-meta">My team-mates and I built a role based access Car Registration system where vehicles owners can register their vehicles by
+                submitting the required documents and get approved by an Admin or a staff. <br><br>
+
+                When a vehicle owner registers and get approved, they get a unique registration ID with their registration certificate, and a plate number.</p>
+        </article>
+
+    </div>
+
+    <a href="YOUR-BLOG-LINK" class="blog-button">
+        SEND A MESSAGE
+    </a>
+</section>
+
+</body>
+</html>
