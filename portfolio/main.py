@@ -31,8 +31,10 @@ mail = Mail(app)
 def home():
     return render_template("index.html")
 
-# --------------TO send your message----------------
 
+
+
+# --------------TO send your message---------------------------------------
 @app.route('/contact2', methods=["GET", "POST"])
 def contact():
     form = Contact_form()
@@ -51,27 +53,31 @@ def contact():
         })
 
         # Send email notification
-        msg = Message(
-            subject=f"New Portfolio Message from {name}",
-            recipients=[app.config['MAIL_USERNAME']],
-            reply_to=email,
-            body=f"""You received a new message through your portfolio contact form.
+        try:
+            msg = Message(
+                subject=f"New Portfolio Message from {name}",
+                recipients=[app.config['MAIL_USERNAME']],
+                reply_to=email,
+                body=f"""You received a new message through your portfolio contact form.
 
-        Name: {name}
-        Email: {email}
+                Name: {name}
+                Email: {email}
 
-        Message:
-        {message}
-        """
-        )
+                Message:
+                {message}
+                """
+            )
 
-        mail.send(msg)
+            mail.send(msg)
 
+        except Exception as e:
+            print("EMAIL ERROR:", e)
 
         flash("Message sent successfully!", "success")
         return redirect(url_for("submission", name=name))
 
     return render_template("contact2.html", form=form)
+
 
 # -----------------successful submission--------------
 @app.route('/submission')
