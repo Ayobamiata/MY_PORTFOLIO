@@ -76,3 +76,69 @@ body {
 }
 
 
+/* MOBILE */
+@media (max-width: 700px) {
+
+  .top-nav {
+    gap: 0;
+    padding: 16px 8px;
+    justify-content: space-between;
+  }
+
+  .top-nav a {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    min-height: 420px;
+    height: auto;
+    aspect-ratio: auto;
+    border-radius: 20px;
+    padding: 30px 20px;
+  }
+
+  .contact-form h2 {
+    padding: 10px;
+    font-size: 25px;
+    line-height: 1.4;
+  }
+}
+
+
+
+@media (max-width: 430px) {
+
+  .top-nav {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .top-nav a {
+    font-size: 12px;
+  }
+
+  .page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .contact-form {
+    min-height: 440px;
+    padding: 25px 18px;
+  }
+
+  .contact-form h2 {
+    padding: 5px;
+    font-size: 23px;
+    line-height: 1.45;
+  }
+}
