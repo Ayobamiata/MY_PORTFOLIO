@@ -1,14 +1,28 @@
 
 from flask import Flask, render_template, flash, url_for,request
 from flask_mail import Mail,Message
+import os
+from dotenv import load_dotenv
 from werkzeug.utils import redirect
 from datetime import datetime             # <-- timestamp each message
 from portfolio.database import messages_collection
-
 from portfolio.forms import Contact_form
 
+load_dotenv()
+
+
 app=Flask(__name__)
-app.config['SECRET_KEY']='great'
+
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_USERNAME')
+
+mail = Mail(app)
 
 
 
@@ -17,15 +31,18 @@ app.config['SECRET_KEY']='great'
 def home():
     return render_template("index.html")
 
-@app.route('/contact2',methods=["GET","POST"])
-def contact():
-    form=Contact_form()
-    if form.validate_on_submit():  #if valid and POSTED
-        name=form.Name.data
-        email=form.Email.data
-        message=form.Message.data
+# --------------TO send your message----------------
 
-        # --------------to save messages to database---------------------
+@app.route('/contact2', methods=["GET", "POST"])
+def contact():
+    form = Contact_form()
+
+    if form.validate_on_submit():
+        name = form.Name.data
+        email = form.Email.data
+        message = form.Message.data
+
+        # Save message to MongoDB
         messages_collection.insert_one({
             "name": name,
             "email": email,
@@ -33,12 +50,28 @@ def contact():
             "timestamp": datetime.utcnow()
         })
 
-        flash("Message sent successfully!","success")
+        # Send email notification
+        msg = Message(
+            subject=f"New Portfolio Message from {name}",
+            recipients=[app.config['MAIL_USERNAME']],
+            reply_to=email,
+            body=f"""You received a new message through your portfolio contact form.
+
+        Name: {name}
+        Email: {email}
+
+        Message:
+        {message}
+        """
+        )
+
+        mail.send(msg)
+
+
+        flash("Message sent successfully!", "success")
         return redirect(url_for("submission", name=name))
 
-    return render_template("contact2.html",form=form)
-
-
+    return render_template("contact2.html", form=form)
 
 # -----------------successful submission--------------
 @app.route('/submission')

@@ -5,17 +5,12 @@ a{
 }
 
 a:hover{
-    color:blue;
+    color:orange;
     text-decoration:none;
 }
 
 
 body{
-    /*background-image:url('pepper4.jpg');
-    text-align:left; /* Align text to th/e right */
-   /* background-size: cover; /* Make it fill the page */
-    /*background-position: left top ; /* Center the image */
-    /*background-repeat: no-repeat;*/
     margin:0;
     color:white;
     font-family:Arial, sans-serif;
@@ -42,7 +37,6 @@ body{
     padding-top:200px;
 
 }
-
 
 
 .hero h1 {
