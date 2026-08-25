@@ -60,12 +60,12 @@ def contact():
                 reply_to=email,
                 body=f"""You received a new message through your portfolio contact form.
 
-                Name: {name}
-                Email: {email}
+Name: {name}
+Email: {email}
 
-                Message:
-                {message}
-                """
+Message:
+        {message}
+"""
             )
 
             mail.send(msg)
@@ -74,7 +74,8 @@ def contact():
             print("EMAIL ERROR:", e)
 
         flash("Message sent successfully!", "success")
-        return redirect(url_for("submission", name=name))
+        # return redirect(url_for("submission", name=name))
+        return redirect(f"/submission?name={name}")
 
     return render_template("contact2.html", form=form)
 
