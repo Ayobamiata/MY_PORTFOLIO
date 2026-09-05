@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='about2.css') }}">
+
+</head>
+
+<body>
+
+
+  <nav class="top-nav">
+    <a href="{{ url_for('home') }}">HOME</a>
+    <a href="{{ url_for('cv') }}">CAREER CV</a>
+    <a href="{{ url_for('project') }}">PROJECTS</a>
+      <a href="{{ url_for('contact') }}">CONTACT</a>
+
+  </nav>
+
+    <section class="about-section">
+
+        <!-- LEFT SIDE -->
+        <div class="about-intro">
+
+            <h1>About</h1>
+
+            <div class="intro-content">
+                <span class="line"></span>
+
+                <p>
+                    I am a B.Sc. degree holder in <strong>Computer Science </strong> which means two things amongst others.
+                </p>
+
+                <p>
+                    One, even though I have decided to specialise in backend development, I excel in navigating the
+                    full Software development cycle.
+                    <br><br>
+                    Two, whilst others might have found themselves in the tech field for survival, I have intentionally positioned myself with the goal of someday building scalable and reliable applications like I now do.
+
+
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- CENTER -->
+        <div class="about-visuals">
+
+            <!-- FIRST IMAGE -->
+            <div class="visual visual-one">
+
+                <div class="phone">
+
+                    <div class="phone-top">
+                        <span></span>
+                        <small>9:41</small>
+                    </div>
+
+                    <img src="{{ url_for('static', filename='certificate1.PNG') }}"
+
+                         alt="Portfolio project">
+
+                    <div class="phone-bottom">
+                        <span>♡</span>
+                        <span>♡</span>
+                        <span>◉</span>
+                    </div>
+
+                </div>
+
+                <p class="caption">
+<!--                    <strong>FIG. 01</strong><br>-->
+                    My B.sc. Degree
+                </p>
+
+            </div>
+
+
+            <!-- SECOND IMAGE -->
+            <div class="visual visual-two">
+
+                <div class="phone">
+
+                    <div class="phone-top">
+                        <span></span>
+                        <small>9:41</small>
+                    </div>
+
+                    <img src="{{ url_for('static', filename='TScert.PNG') }}"
+
+                         alt="Portfolio project">
+
+                    <div class="phone-bottom">
+                        <span>♡</span>
+                        <span>♡</span>
+                        <span>◉</span>
+                    </div>
+
+                </div>
+
+                <p class="caption">
+<!--                    <strong>FIG. 02</strong><br>-->
+                    To further equip my knowledge, I enrolled at <strong> TECH SPHERE ACADEMY </strong>, Birmingham,
+                    United Kingdom which earned me a professional certificate as a backend developer.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="about-details">
+
+            <div class="arrow">
+                ↘
+            </div>
+
+            <p class="details-text">
+                I also studied at <strong>THE APP BREWERY</strong>; London’s highest rated programming
+                bootcamp since 2015; where I sharpened my Phyton and Flask skills.
+            </p>
+
+
+            <!-- ANALYTICS CARD -->
+            <div class="analytics-card">
+
+                <img src="{{ url_for('static', filename='appbrew1.PNG') }}"
+
+                         alt="Portfolio project">
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

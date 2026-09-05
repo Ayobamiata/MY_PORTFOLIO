@@ -15,4 +15,3 @@ db = client["contact_database"]
 
 messages_collection = db["messages"]
 
-print(db.list_collection_names())
